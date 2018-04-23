@@ -28,7 +28,6 @@ inline void gpuAssert(cudaError_t code, const char *file, int line, bool abort =
 
 class Cuda_Computing {
 public:
-
 	//constructor
 	Cuda_Computing();
 
@@ -41,13 +40,10 @@ public:
 
 
 private:
+	const int N;			// number of bodies
 	dim3 gridSize;			// The actual grid size needed, based on input size (num blocks)
 	dim3 blockSize;			// Suggested block size to achieve maximum occupancy.(num threads per block)
 
-private:
-
-	//def constructor
-	Cuda_Computing();
 
 };
 

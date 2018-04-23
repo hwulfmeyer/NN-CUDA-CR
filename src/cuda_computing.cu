@@ -9,7 +9,10 @@ namespace Device {
 	// CUDA global constants
 	__device__ __constant__
 		int NTHREADS;
+}
 
+Cuda_Computing::Cuda_Computing() : N(100){
+}
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // initializes device, detects hardware, number of threads per block
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -49,7 +52,7 @@ Cuda_Computing::initDevice() {
 
 	int nTh = THREADS_PER_BLOCK;
 
-	errorCheckCuda(cudaMemcpyToSymbol(Device::NTHREADS, &blockSize.x, sizeof(int), 0, cudaMemcpyHostToDevice));
+	errorCheckCuda(cudaMemcpyToSymbol(&Device::NTHREADS, &blockSize.x, sizeof(int), 0, cudaMemcpyHostToDevice));
 	return true;
 }
 
