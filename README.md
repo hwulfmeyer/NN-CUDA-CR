@@ -6,4 +6,15 @@ Training sets:
 
 
 LeNet-5, convolutional neural networks: 
-http://yann.lecun.com/exdb/lenet/
+- http://yann.lecun.com/exdb/lenet/
+
+## Development Plan
+
+1. NN
+   1. NN Single Thread
+   2. NN Multi Thread
+   3. NN CUDA
+1. CNN
+   1. CNN Single Thread
+   2. CNN Multi Thread
+   3. CNN CUDA
